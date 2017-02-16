@@ -320,13 +320,7 @@ while($row = mysqli_fetch_object($result)){
 								</div>
 								
 								
-						<script src="http://www.shoutbox.com/chat/chat.js.php"></script>
-					<script> var chat = new Chat(7860, 'guest');</script>
-					<style>
-					.shoutBoxContainer {
-					 height:500px;
-					}
-					</style>
+						<!-- Start HTML Code --><iframe WIDTH="400" HEIGHT="500" title="Shoutbox" src="https://shoutbox.widget.me/start.html?uid=lmuns1ak" frameborder="0" scrolling="auto"></iframe><script src="https://shoutbox.widget.me/v1.js" type="text/javascript"></script><br><a href="http://shoutbox.widget.me" title="Shoutbox Widget">Shout</a><a href="http://shoutbox-tutorials.blogspot.com" title="Shoutbox Tutorials">bo</a><a href="http://www.youtube.com/watch?v=4IBqLxtAbs0" title="Shoutbox Video">x</a><br><!-- End HTML Code -->
 					</div>
 					</div>
 				</div>
@@ -340,7 +334,7 @@ while($row = mysqli_fetch_object($result)){
 			<div class="row">
 					<div class="col-md-10 col-md-offset-1 text-center">
 						<div class="g-heading-v9 text-center g-mb-30">
-							<h2><strong>Combined Killer Stats</strong></h2>
+							<h2><strong>Combined Stats</strong></h2>
 						</div>
 						
 						
@@ -484,37 +478,37 @@ while($row = mysqli_fetch_object($result)){
 							
 							<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($rob->kills/$rob->deaths,4) ?></span>
+							<span class="counterr"><?php echo number_format($rob->kills/$rob->deaths,4) ?></span>
 							<h4>K/D</h4>
 						</div>
 					</div>
 							<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($rob->squadScore,0) ?></span>
+							<span class="counterr"><?php echo number_format($rob->squadScore,0) ?></span>
 							<h4>Squad Points</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format(($rob->wins / $rob->roundsPlayed) * 100,0) ?></span><span class="big-text"> %</span>
+							<span class="counterr"><?php echo number_format(($rob->wins / $rob->roundsPlayed) * 100,0) ?></span><span class="big-text"> %</span>
 							<h4>Win Percentage</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($rob->kills,0) ?></span>
+							<span class="counterr"><?php echo number_format($rob->kills,0) ?></span>
 							<h4>Kills</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($rob->timePlayed/60/60,0) ?></span><span class="big-text"> hrs</span>
+							<span class="counterr"><?php echo number_format($rob->timePlayed/60/60,0) ?></span><span class="big-text"> hrs</span>
 							<h4>Playing Time</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($rob->revives,0) ?></span>
+							<span class="counterr"><?php echo number_format($rob->revives,0) ?></span>
 							<h4>Revives</h4>
 						</div>
 					</div>
@@ -527,37 +521,37 @@ while($row = mysqli_fetch_object($result)){
 							
 							<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($anthony->kills/$anthony->deaths,4) ?></span>
+							<span class="counterr"><?php echo number_format($anthony->kills/$anthony->deaths,4) ?></span>
 							<h4>K/D</h4>
 						</div>
 					</div>
 							<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($anthony->squadScore,0) ?></span>
+							<span class="counterr"><?php echo number_format($anthony->squadScore,0) ?></span>
 							<h4>Squad Points</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format(($anthony->wins / $anthony->roundsPlayed) * 100,0) ?></span><span class="big-text"> %</span>
+							<span class="counterr"><?php echo number_format(($anthony->wins / $anthony->roundsPlayed) * 100,0) ?></span><span class="big-text"> %</span>
 							<h4>Win Percentage</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($anthony->kills,0) ?></span>
+							<span class="counterr"><?php echo number_format($anthony->kills,0) ?></span>
 							<h4>Kills</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($anthony->timePlayed/60/60,0) ?></span><span class="big-text"> hrs</span>
+							<span class="counterr"><?php echo number_format($anthony->timePlayed/60/60,0) ?></span><span class="big-text"> hrs</span>
 							<h4>Playing Time</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($anthony->revives,0) ?></span>
+							<span class="counterr"><?php echo number_format($anthony->revives,0) ?></span>
 							<h4>Revives</h4>
 						</div>
 					</div>
@@ -569,37 +563,37 @@ while($row = mysqli_fetch_object($result)){
 							
 							<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($justin->kills/$justin->deaths,4) ?></span>
+							<span class="counterr"><?php echo number_format($justin->kills/$justin->deaths,4) ?></span>
 							<h4>K/D</h4>
 						</div>
 					</div>
 							<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($justin->squadScore,0) ?></span>
+							<span class="counterr"><?php echo number_format($justin->squadScore,0) ?></span>
 							<h4>Squad Points</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format(($justin->wins / $justin->roundsPlayed) * 100,0) ?></span><span class="big-text"> %</span>
+							<span class="counterr"><?php echo number_format(($justin->wins / $justin->roundsPlayed) * 100,0) ?></span><span class="big-text"> %</span>
 							<h4>Win Percentage</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($justin->kills,0) ?></span>
+							<span class="counterr"><?php echo number_format($justin->kills,0) ?></span>
 							<h4>Kills</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($justin->timePlayed/60/60,0) ?></span><span class="big-text"> hrs</span>
+							<span class="counterr"><?php echo number_format($justin->timePlayed/60/60,0) ?></span><span class="big-text"> hrs</span>
 							<h4>Playing Time</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo number_format($justin->revives,0) ?></span>
+							<span class="counterr"><?php echo number_format($justin->revives,0) ?></span>
 							<h4>Revives</h4>
 						</div>
 					</div>
@@ -613,37 +607,37 @@ while($row = mysqli_fetch_object($result)){
 							
 							<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo 'NA'//number_format($justin->kills/$justin->deaths,4) ?></span>
+							<span class="counterr"><?php echo 'NA'//number_format($justin->kills/$justin->deaths,4) ?></span>
 							<h4>K/D</h4>
 						</div>
 					</div>
 							<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo 'NA'//number_format($justin->squadScore,0) ?></span>
+							<span class="counterr"><?php echo 'NA'//number_format($justin->squadScore,0) ?></span>
 							<h4>Squad Points</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo 'NA'//number_format(($justin->wins / $justin->roundsPlayed) * 100,0) ?></span><span class="big-text"> %</span>
+							<span class="counterr"><?php echo 'NA'//number_format(($justin->wins / $justin->roundsPlayed) * 100,0) ?></span><span class="big-text"> %</span>
 							<h4>Win Percentage</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo 'NA'//number_format($justin->kills,0) ?></span>
+							<span class="counterr"><?php echo 'NA'//number_format($justin->kills,0) ?></span>
 							<h4>Kills</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo 'NA'//number_format($justin->timePlayed/60/60,0) ?></span><span class="big-text"> hrs</span>
+							<span class="counterr"><?php echo 'NA'//number_format($justin->timePlayed/60/60,0) ?></span><span class="big-text"> hrs</span>
 							<h4>Playing Time</h4>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-6">
 						<div class="counters">
-							<span class="counter"><?php echo 'NA'//number_format($justin->revives,0) ?></span>
+							<span class="counterr"><?php echo 'NA'//number_format($justin->revives,0) ?></span>
 							<h4>Revives</h4>
 						</div>
 					</div>
