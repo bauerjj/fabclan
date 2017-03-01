@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost'; //production
+$host = 'production'; //production
 
 include_once('config.inc.php'); // for db login credentials
 
@@ -45,8 +45,8 @@ while($row = mysqli_fetch_object($result)){
 	else
 		$kyle = $row;
 	
-	if($row->id == 2)
-		break; // ignore kyle for now
+	//if($row->id == 2)
+	//	break; // ignore kyle for now
 	
 	$totalWins += $row->wins;
 	$totalKills += $row->kills;
@@ -163,6 +163,24 @@ while($row = mysqli_fetch_object($result)){
 			<!-- /.container -->
 		</nav>
 		<!-- End Header -->
+<div class="marquee">			
+<h6>Congratulations to Anthony for his 11k kills! </h6>
+</div>
+<style>
+.marquee{
+	height: 5px;
+	margin-top: 40px;
+}
+
+.marquee h6{
+		font-size: 30px !important;
+		height: 37px;
+		line-height: 24px;
+		margin-bottom: 20px;
+}
+}
+
+</style>
 
 		<!-- Promo Block -->
 		<div class="promo g-theme-bg-color-1">
@@ -407,8 +425,8 @@ while($row = mysqli_fetch_object($result)){
 							<p class="post text-uppercase g-theme-text-color-1 g-mb-10"><strong>Medic</strong></p>
 							<h4 class="text-uppercase"><strong>Gnarama</strong></h4>
 							<p> "Battlefield ruined my marriage, but my k/d has reached new heights. It's a trade off I not only accepted, but invited"</p>
-							<p class="g-mb-5"><strong>Interests:</strong> Volleyball, Chopping Wood, arts and crafts, liquor</p>
-							<p class="g-mb-5"><strong>Once Cool Fact:</strong> Ate a man</p>
+							<p class="g-mb-5"><strong>Interests:</strong> Arts and Crafts</p>
+							<p class="g-mb-5"><strong>Once Cool Fact:</strong> Married</p>
 
 							<hr>
 						</div>
@@ -420,9 +438,9 @@ while($row = mysqli_fetch_object($result)){
 							</a>
 							<p class="post text-uppercase g-theme-text-color-1 g-mb-10"><strong>Medic</strong></p>
 							<h4 class="text-uppercase"><strong>JBmtk</strong></h4>
-							<p> "Battlefield ruined my marriage, but my k/d has reached new heights. It's a trade off I not only accepted, but invited"</p>
-							<p class="g-mb-5"><strong>Interests:</strong> Volleyball, Chopping Wood, arts and crafts, liquor</p>
-							<p class="g-mb-5"><strong>Once Cool Fact:</strong> Ate a man</p>
+							<p> "I work very hard"</p>
+							<p class="g-mb-5"><strong>Interests:</strong> None</p>
+							<p class="g-mb-5"><strong>Once Cool Fact:</strong> None</p>
 
 							
 							<hr>
@@ -434,10 +452,10 @@ while($row = mysqli_fetch_object($result)){
 							<img class="img-responsive" src="assets/img-temp/promo/rob.png" alt="">
 							</a>
 							<p class="post text-uppercase g-theme-text-color-1 g-mb-10"><strong>Medic</strong></p>
-							<h4 class="text-uppercase"><strong>tulsrob</strong></h4>
-							<p> "Battlefield ruined my marriage, but my k/d has reached new heights. It's a trade off I not only accepted, but invited"</p>
-							<p class="g-mb-5"><strong>Interests:</strong> Volleyball, Chopping Wood, arts and crafts, liquor</p>
-							<p class="g-mb-5"><strong>Once Cool Fact:</strong> Ate a man</p>
+							<h4 class="text-uppercase"><strong>tulsarob</strong></h4>
+							<p> "NA"</p>
+							<p class="g-mb-5"><strong>Interests:</strong> The Office</p>
+							<p class="g-mb-5"><strong>Once Cool Fact:</strong> Is Tall</p>
 
 							<hr>
 						</div>
@@ -449,9 +467,9 @@ while($row = mysqli_fetch_object($result)){
 							</a>
 							<p class="post text-uppercase g-theme-text-color-1 g-mb-10"><strong>Support</strong></p>
 							<h4 class="text-uppercase"><strong>I have 2 ears</strong></h4>
-							<p> "Battlefield ruined my marriage, but my k/d has reached new heights. It's a trade off I not only accepted, but invited"</p>
-							<p class="g-mb-5"><strong>Interests:</strong> Volleyball, Chopping Wood, arts and crafts, liquor</p>
-							<p class="g-mb-5"><strong>Once Cool Fact:</strong> Ate a man</p>
+							<p> "NA"</p>
+							<p class="g-mb-5"><strong>Interests:</strong> Perfecting the auto-revolver</p>
+							<p class="g-mb-5"><strong>Once Cool Fact:</strong> Killed a man in real life</p>
 
 							<hr>
 						</div>
@@ -811,8 +829,81 @@ while($row = mysqli_fetch_object($result)){
 		
 		
 		
+		
+		
 	});
 	</script>
+	
+	<script>
+	(function($) {
+        $.fn.textWidth = function(){
+             var calc = '<span style="display:none">' + $(this).text() + '</span>';
+             $('body').append(calc);
+             var width = $('body').find('span:last').width();
+             $('body').find('span:last').remove();
+            return width;
+        };
+        
+        $.fn.marquee = function(args) {
+            var that = $(this);
+            var textWidth = that.textWidth(),
+                offset = that.width(),
+                width = offset,
+                css = {
+                    'text-indent' : that.css('text-indent'),
+                    'overflow' : that.css('overflow'),
+                    'white-space' : that.css('white-space')
+                },
+                marqueeCss = {
+                    'text-indent' : width,
+                    'overflow' : 'hidden',
+                    'white-space' : 'nowrap'
+                },
+                args = $.extend(true, { count: -1, speed: 1e1, leftToRight: false }, args),
+                i = 0,
+                stop = textWidth*-1,
+                dfd = $.Deferred();
+            
+            function go() {
+                if(!that.length) return dfd.reject();
+                if(width == stop) {
+                    i++;
+                    if(i == args.count) {
+                        that.css(css);
+                        return dfd.resolve();
+                    }
+                    if(args.leftToRight) {
+                        width = textWidth*-1;
+                    } else {
+                        width = offset;
+                    }
+                }
+                that.css('text-indent', width + 'px');
+                if(args.leftToRight) {
+                    width++;
+                } else {
+                    width--;
+                }
+                setTimeout(go, args.speed);
+            };
+            if(args.leftToRight) {
+                width = textWidth*-1;
+                width++;
+                stop = offset;
+            } else {
+                width--;            
+            }
+            that.css(marqueeCss);
+            go();
+            return dfd.promise();
+        };
+    })(jQuery);
+
+$('ex1').marquee();
+$('h6').marquee(); 
+
+
+</script>
 	
 	<script>
 	/*var saveData = $.ajax({
